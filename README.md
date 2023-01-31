@@ -3,12 +3,51 @@
 in reverse-chronological order (Christmas at the top). A high-level overview of past projects, where each entry can be expanded for additional detail.
 
 
+## 2023
+
+- Location: Remote
+- RootsTech back to in-person, but also online (??? participants).
+- _In-progress: Read-Only Mode for Pedigree View, Descendancy Pedigree View, Fanchart Pedigree View, Private Groups, Community Edit Trees_
+
+<details>
+<summary>Technologies</summary>
+
+- Zion: GitHub monorepo of ??+ components with ??-minute build time (v??)
+    - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, Cypress, NX, ESLint8, Prettier
+
+</details>
+
 ## 2022
 
 - Location: Remote
 - Second year of purely online RootsTech Connect Conference (??? participants).
 - Create a tree onboarding experience, with registration changing to require minimal information.
-- Release First Ancestor Pedigree View
+- Hand off Conclusion component to tw-blue for phase 2 development.
+- Release React First Ancestor Pedigree View.
+- Release React Landscape/Portrait Pedigree Views.
+
+<details>
+<summary>Technologies</summary>
+
+- Zion: GitHub monorepo of 130+ components with 60-minute build time (v12)
+    - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, NX, ESLint7, Prettier, terrible MFA SSO
+
+</details>
+
+<details>
+<summary>Shared components</summary>
+
+- React: Forms AddFindFlow, Pedigree View
+- Polymer: birch-standards-picker, birch-typeahead, fs-add-person, fs-cache, fs-change-summary, fs-collapsable-card, fs-copy-pid, fs-couple-renderer, fs-decorated-text, fs-demo, fs-descendancy, fs-dialog, fs-duplicate-not-a-match, fs-family-members, fs-fanchart, fs-find-page, fs-helplet, fs-horizontal-scroller, fs-indicators, fs-life-events, fs-list-page, fs-more-less, fs-pedigree, fs-pedigree-data-service, fs-permissions, fs-person-card, fs-person-data-service, fs-person-notes, fs-person-page, fs-person-summary, fs-person-tile, fs-person-timeline, fs-prompt, fs-relationship-calc, fs-research-help-page, fs-research-help-service, fs-reservations, fs-soft-launch, fs-temple, fs-test-component, fs-todo-list, fs-tree-changelog, fs-tree-common-routing, fs-tree-conclusion, fs-tree-is-authorized, fs-tree-name-template, fs-tree-navigation, fs-tree-onboarding-flow, fs-tree-person-ordinances, fs-tree-person-renderer, fs-tree-recents, fs-user-preferences-service, fs-user-service, fs-walkme, fs-watch, inert, resettable-properties-behavior, styles-wc, tree-data-handler, wc-i18n
+
+</details>
+
+<details>
+<summary>Christmas (barely given time)</summary>
+
+- Create React Descendancy view (recursive node, initial styling, connector lines, hover, expansion, collapse, data fetching)
+
+</details>
 
 ## 2021
 
@@ -21,6 +60,7 @@ in reverse-chronological order (Christmas at the top). A high-level overview of 
 <summary>Technologies</summary>
 
 - Zion: GitHub monorepo of 100+ components with 50-minute build time (v10)
+    - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest
 
 </details>
 
@@ -29,11 +69,12 @@ in reverse-chronological order (Christmas at the top). A high-level overview of 
 
 - Forms (complete performance overhaul conversion from Formik to react-hook-form)
 - React: AddFindFlow, Conclusion, First Ancestor Pedigree View
+- Polymer: birch-standards-picker, birch-typeahead, fs-add-person, fs-cache, fs-change-summary, fs-collapsable-card, fs-copy-pid, fs-couple-renderer, fs-decorated-text, fs-demo, fs-descendancy, fs-dialog, fs-duplicate-not-a-match, fs-family-members, fs-fanchart, fs-find-page, fs-helplet, fs-horizontal-scroller, fs-indicators, fs-life-events, fs-list-page, fs-more-less, fs-pedigree, fs-pedigree-data-service, fs-permissions, fs-person-card, fs-person-data-service, fs-person-notes, fs-person-page, fs-person-summary, fs-person-tile, fs-person-timeline, fs-prompt, fs-relationship-calc, fs-research-help-page, fs-research-help-service, fs-reservations, fs-soft-launch, fs-temple, fs-test-component, fs-todo-list, fs-tree-changelog, fs-tree-common-routing, fs-tree-conclusion, fs-tree-is-authorized, fs-tree-name-template, fs-tree-navigation, fs-tree-onboarding-flow, fs-tree-person-ordinances, fs-tree-person-renderer, fs-tree-recents, fs-user-preferences-service, fs-user-service, fs-walkme, fs-watch, inert, resettable-properties-behavior, styles-wc, tree-data-handler, wc-i18n
 
 </details>
 
 <details>
-<summary>Christmas</summary>
+<summary>Christmas (sick)</summary>
 
 - (Early) Organization-wide /version pages added to react branch of snow
 - Stryker mutator update
@@ -43,13 +84,13 @@ in reverse-chronological order (Christmas at the top). A high-level overview of 
 ## 2020
 
 - Location: Family Search Building, Thanksgiving Point, Lehi
-- The first year of the organization-wide conversion to React. Develop highly shared components.
+- The first year of the organization-wide conversion to React. Begin development of complicated, highly shared components (person and add flow).
 
 <details>
 <summary>Technologies</summary>
 
 - Zion: GitHub monorepo of ~50 components with 20-minute build time (v9)
-    - Storybook, Yarn, Lerna, Babel, Jest
+    - React, Storybook, Yarn, Emotion, Lerna, Babel, Jest, ESLint6
 - Heroku
 - Akamai
 - JavaScript: React (Polymer = deprecated)
@@ -115,6 +156,20 @@ Enhance https://github.com/skye2k2/pr-police/branches in order to provide better
 - Location: Family Search Building, Thanksgiving Point, Lehi
 
 <details>
+<summary>Technologies</summary>
+
+- fs-components
+    - Polymer, native web components, Web Component Tester, Sauce, ESLint, Code Climate
+- Heroku
+- Akamai
+- JavaScript: Polymer (Angular = deprecated)
+- ElectricFlow
+- SauceLabs
+- Slack + Cisco Webex
+
+</details>
+
+<details>
 <summary>Christmas: To-do list</summary>
 
 - Home's To-do List moved to a shared component, improved, and tested [pull request](https://github.com/fs-webdev/fs-todo-list/pull/1)
@@ -147,6 +202,20 @@ Enhance https://github.com/skye2k2/pr-police/branches in order to provide better
 ## 2017
 
 - Location: Old Word Perfect Campus, Orem
+
+<details>
+<summary>Technologies</summary>
+
+- ng-shared-components
+    - Angular, Karma, Mocha, Chai, Sinon, PhantomJS, Code Climate
+- Heroku
+- Akamai
+- JavaScript: Angular (gadgets = deprecated)
+- ElectricFlow
+- SauceLabs
+- HipChat + Cisco Webex
+
+</details>
 
 <details>
 <summary>Christmas: Misc.</summary>
@@ -210,7 +279,7 @@ Enhance https://github.com/skye2k2/pr-police/branches in order to provide better
 ## 2013
 
 - Location: Joseph Smith Memorial Building, Salt Lake City
-- Get up to speed
+- Start in August. Get up to speed
 
 <details>
 <summary>Christmas: Integration test help</summary>
