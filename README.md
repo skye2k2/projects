@@ -2,35 +2,57 @@
 
 in reverse-chronological order (Christmas at the top). A high-level overview of past projects, where each entry can be expanded for additional detail.
 
+<!--- 
+
+LINKS FOR STATS:
+
+Package count (filter to @fs/zion): https://www.familysearch.org/frontier/dashboard/package (does not include individual counts of all zion-ui components)
+Build time: https://www.familysearch.org/frontier/dashboard/zion-builds
+
+--->
+
 
 ## 2023
 
-- Location: Remote
-- RootsTech back to in-person, but also online (??? participants).
-- _In-progress: Read-Only Mode for Pedigree View, Descendancy Pedigree View, Fanchart Pedigree View, Private Groups, Community Edit Trees_
+- Location: Remote, treeweb-blue
+	- Dumped onto tw-blue team, in an attempt to share team culture and engineering best practices to a half of the team without balance in their development habits.
+- RootsTech back to in-person, but also online (3.6M web participants, 14.5k in-person, 128k hrs of viewed content).
+- Active React migrations of the remainder of treeweb code halted to begin immediate development of family group and community edit trees, and the supporting sibling pedigree view (Ancestry.com clone).
+- Manage pedigree Community feedback forum and persist React Landscape/Portrait Pedigree Views.
+- LLS mode added to pedigree view for Search team.
+
+Organization-wide restructure.
 
 <details>
 <summary>Technologies</summary>
 
-- Zion: GitHub monorepo of ??+ components with ??-minute build time (v??)
-    - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, Cypress, NX, ESLint8, Prettier
+- All babylon components moved to zion.
+- Zion: GitHub monorepo of 131 (+104 zion-ui) components with 50-minute build time (v13)
+    - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, Cypress, NX (not really), ESLint8, Prettier, Travis CI, node 20
+- Heroku, moving next year to pure AWS machines
+- Akamai
+- JavaScript: React (Polymer = deprecated)
+- CloudBees (formerly ElectricFlow), moving next year to pure GitHub action builds
+- SauceLabs
+- Slack + Microsoft Teams
+- Convert from VersionOne project management to JIRA, with some significant drawbacks
 
 </details>
 
 ## 2022
 
-- Location: Remote
-- Second year of purely online RootsTech Connect Conference (??? participants).
+- Location: Remote, treeweb-gold
+- Second year of purely online RootsTech Connect Conference (3.1M web participants, 22k hrs of viewed content).
 - Create a tree onboarding experience, with registration changing to require minimal information.
-- Hand off Conclusion component to tw-blue for phase 2 development.
+- Hand off Conclusion component to tw-blue for phase 2 development for the person page.
 - Release React First Ancestor Pedigree View.
 - Release React Landscape/Portrait Pedigree Views.
 
 <details>
 <summary>Technologies</summary>
 
-- Zion: GitHub monorepo of 130+ components with 60-minute build time (v12)
-    - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, NX, ESLint7, Prettier, terrible MFA SSO
+- Zion: GitHub monorepo of 113 (+60 zion-ui) components with 60-minute build time (v12)
+    - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, NX, ESLint7, Prettier, Travis CI, node 16, terrible MFA SSO
 
 </details>
 
@@ -51,16 +73,16 @@ in reverse-chronological order (Christmas at the top). A high-level overview of 
 
 ## 2021
 
-- Location: Remote
-- Organization restructure into geographically-focused projects--lose significant number - of Tree developers, temporarily and permanently.
-- First year of purely online RootsTech Connect Conference (500,000? participants).
+- Location: Remote, treeweb-gold
+- Organization restructure into geographically-focused projects--lose significant number ? of Tree developers, temporarily and permanently.
+- First year of purely online RootsTech Connect Conference (1.5M web participants).
 - Migrate off of SalesForce to Brightspot + JIRA.
 
 <details>
 <summary>Technologies</summary>
 
 - Zion: GitHub monorepo of 100+ components with 50-minute build time (v10)
-    - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest
+    - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, Travis CI, node 14
 
 </details>
 
@@ -83,20 +105,21 @@ in reverse-chronological order (Christmas at the top). A high-level overview of 
 
 ## 2020
 
-- Location: Family Search Building, Thanksgiving Point, Lehi
+- Location: Family Search Building, Thanksgiving Point, Lehi, treeweb-gold
 - The first year of the organization-wide conversion to React. Begin development of complicated, highly shared components (person and add flow).
 
 <details>
 <summary>Technologies</summary>
 
 - Zion: GitHub monorepo of ~50 components with 20-minute build time (v9)
-    - React, Storybook, Yarn, Emotion, Lerna, Babel, Jest, ESLint6
+    - React, Storybook, Yarn, Emotion, Lerna, Babel, Jest, ESLint6, Travis CI, node 14
 - Heroku
 - Akamai
 - JavaScript: React (Polymer = deprecated)
 - CloudBees (formerly ElectricFlow)
 - SauceLabs
 - Slack + Microsoft Teams
+- VersionOne
 
 </details>
 
@@ -132,7 +155,7 @@ in reverse-chronological order (Christmas at the top). A high-level overview of 
 
 ## 2019
 
-- Location: Family Search Building, Thanksgiving Point, Lehi
+- Location: Family Search Building, Thanksgiving Point, Lehi, treeweb-gold
 
 <details>
 <summary>Christmas: Common build config</summary>
@@ -153,19 +176,20 @@ Enhance https://github.com/skye2k2/pr-police/branches in order to provide better
 
 ## 2018
 
-- Location: Family Search Building, Thanksgiving Point, Lehi
+- Location: Family Search Building, Thanksgiving Point, Lehi, treeweb-gold
 
 <details>
 <summary>Technologies</summary>
 
 - fs-components
-    - Polymer, native web components, Web Component Tester, Sauce, ESLint, Code Climate
+    - Polymer, native web components, Web Component Tester, Sauce, ESLint, Code Climate, Travis CI, 
 - Heroku
 - Akamai
 - JavaScript: Polymer (Angular = deprecated)
 - ElectricFlow
 - SauceLabs
 - Slack + Cisco Webex
+- VersionOne
 
 </details>
 
@@ -201,19 +225,20 @@ Enhance https://github.com/skye2k2/pr-police/branches in order to provide better
 
 ## 2017
 
-- Location: Old Word Perfect Campus, Orem
+- Location: Old Word Perfect Campus, Orem, tree-teflon
 
 <details>
 <summary>Technologies</summary>
 
 - ng-shared-components
-    - Angular, Karma, Mocha, Chai, Sinon, PhantomJS, Code Climate
+    - Angular, Karma, Mocha, Chai, Sinon, PhantomJS, Code Climate, Travis CI
 - Heroku
 - Akamai
 - JavaScript: Angular (gadgets = deprecated)
 - ElectricFlow
 - SauceLabs
 - HipChat + Cisco Webex
+- VersionOne
 
 </details>
 
@@ -234,7 +259,7 @@ Enhance https://github.com/skye2k2/pr-police/branches in order to provide better
 
 ## 2016
 
-- Location: Old Word Perfect Campus, Orem
+- Location: Old Word Perfect Campus, Orem, tree-teflon
 - MIGRATE OFF OF ORACLE TO CASSANDRA?
 
 <details>
@@ -251,7 +276,7 @@ Enhance https://github.com/skye2k2/pr-police/branches in order to provide better
 
 ## 2015
 
-- Location: Joseph Smith Memorial Building, Salt Lake City
+- Location: Joseph Smith Memorial Building, Salt Lake City, tree-teflon
 
 <details>
 <summary>Christmas: Re-orderable person page</summary>
@@ -263,7 +288,7 @@ Enhance https://github.com/skye2k2/pr-police/branches in order to provide better
 
 ## 2014
 
-- Location: Joseph Smith Memorial Building, Salt Lake City
+- Location: Joseph Smith Memorial Building, Salt Lake City, tree-teflon
 
 <details>
 <summary>Christmas: Portrait pedigree enhancements</summary>
@@ -278,7 +303,7 @@ Enhance https://github.com/skye2k2/pr-police/branches in order to provide better
 
 ## 2013
 
-- Location: Joseph Smith Memorial Building, Salt Lake City
+- Location: Joseph Smith Memorial Building, Salt Lake City, tree-teflon
 - Start in August. Get up to speed
 
 <details>
