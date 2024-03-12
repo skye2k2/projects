@@ -1,6 +1,6 @@
 # Historical timeline of Clif's projects
 
-in reverse-chronological order (Christmas at the top). A high-level overview of past projects, where each entry can be expanded for additional detail.
+in reverse-chronological order (Christmas at the top). A high-level overview of past projects, where entries can be expanded for additional detail.
 
 <!--- 
 
@@ -12,16 +12,49 @@ Build time: https://www.familysearch.org/frontier/dashboard/zion-builds
 --->
 
 
+## 2024
+
+*Organization-wide restructure: Creation of engineering lead position; shuffling of directs; reallocation of engineers; formalized process for originating story work; tons of extra reporting and paperwork; unrelenting pressure to deliver on stale deadlines, resulting in the temporary loaning of personnel from other teams for a month or two at a time, with very little positive impact.*
+
+- Location: Remote, treeweb-webdev
+	- We lost another three headcount on the tree team, leaving me the webdev on the team with the most experience with our codebase.
+	- Fortunately, we were also able to decommission or send off applications to other more appropriate teams (temple-r9, tree-import-r9, tree-lite, tree-place-standardizer).
+- RootsTech in-person & online (?M web participants, ?k in-person, ?k hrs of viewed content).
+- Migrate from CloudBees Flow to GitHub actions for application builds.
+- Migrate last two pedigree views from Polymer to React (descendancy & fanchart).
+- Me: 
+  - Create taskmaster bash script that utilizes the JIRA API to manage the tedium of adding labels, epic designations, hours, assignees, and rankings when adding active defects and recurring engineering maintenance stories to our sprints (8 maintenance tasks and ~20 defects every sprint). Shared with other teams.
+
 ## 2023
 
 - Location: Remote, treeweb-blue
 	- Dumped onto tw-blue team, in an attempt to share team culture and engineering best practices to a half of the team without balance in their development habits.
 - RootsTech back to in-person, but also online (3.6M web participants, 14.5k in-person, 128k hrs of viewed content).
 - Active React migrations of the remainder of treeweb code halted to begin immediate development of family group and community edit trees, and the supporting sibling pedigree view (Ancestry.com clone).
-- Manage pedigree Community feedback forum and persist React Landscape/Portrait Pedigree Views.
-- LLS mode added to pedigree view for Search team.
+- LLS mode added to React pedigree view for Search team.
+- Me: 
+  - Share my build notification scripts with multiple teams and assist them in initial configuration: china, oral-genealogies, relatives-at-events, discovery, discovery-kids, shared-image-viewer, rootstech.
+  - Manage pedigree Community feedback forum and persist React Landscape/Portrait Pedigree Views.
+  - Create a Storybook entry that allows for viewing and filtering of all active Split flags, and quick links to search fs-webdev for usages for during the persisting process.
 
-Organization-wide restructure.
+**Apps owned by tree:**
+
+* ancestors-r9
+* app-status-dashboard
+* group-management
+* info-radiator
+* temple-admin
+* temple-r9
+* tree
+* tree-import-r9
+* tree-lite
+* tree-person-r9
+* tree-place-standardizer
+* tree-r9
+
+**Shared components owned by tree (38):**
+
+add-find-flow, ancestor-card, attribution, click-to-copy, conclusion, controlled-edit-trees, error-page, form, gender-band, group-management, memory-tile, name-template, ordinances-reserve, ordinances-status, performance-helpers, person, person-band, person-quality-score, person-service, person-summary, pid, relationship-viewer, research-help, search-partners, soft-launch, storage-sync, story-cache, story-recent-pids, suggested-reasons, tree-discussion, tree-groups, tree-pedigree, tree-person-info-card, tree-pubsub, tree-recents, tree-route, tree-subnav-legacy
 
 <details>
 <summary>Technologies</summary>
@@ -32,10 +65,18 @@ Organization-wide restructure.
 - Heroku, moving next year to pure AWS machines
 - Akamai
 - JavaScript: React (Polymer = deprecated)
+- Split.io feature release management (479 active flags)
 - CloudBees (formerly ElectricFlow), moving next year to pure GitHub action builds
 - SauceLabs
 - Slack + Microsoft Teams
-- Convert from VersionOne project management to JIRA, with some significant drawbacks
+- Convert from VersionOne project management to JIRA, with some significant hangups and drawbacks
+
+</details>
+
+<details>
+<summary>Christmas (barely given time)</summary>
+
+- Restructure GitHub team configuration and subscriptions as a precursor to combining the Tree teams.
 
 </details>
 
@@ -43,7 +84,7 @@ Organization-wide restructure.
 
 - Location: Remote, treeweb-gold
 - Second year of purely online RootsTech Connect Conference (3.1M web participants, 22k hrs of viewed content).
-- Create a tree onboarding experience, with registration changing to require minimal information.
+- Create a tree onboarding experience, with registration changing to no longer require gender information.
 - Hand off Conclusion component to tw-blue for phase 2 development for the person page.
 - Release React First Ancestor Pedigree View.
 - Release React Landscape/Portrait Pedigree Views.
@@ -73,10 +114,12 @@ Organization-wide restructure.
 
 ## 2021
 
+*Organization-wide restructure into geographically-focused projects--lose significant number ? of Tree developers, temporarily and permanently. These geo teams now have carte blanche for their activities and top priority on demanding resources or support for their efforts, and the remaining engineering teams must simply get more done with less.*
+
 - Location: Remote, treeweb-gold
-- Organization restructure into geographically-focused projects--lose significant number ? of Tree developers, temporarily and permanently.
 - First year of purely online RootsTech Connect Conference (1.5M web participants).
 - Migrate off of SalesForce to Brightspot + JIRA.
+- Create React-based person page and landscape/portrait pedigree views.
 
 <details>
 <summary>Technologies</summary>
@@ -126,7 +169,7 @@ Organization-wide restructure.
 <details>
 <summary>Christmas (sick)</summary>
 
-- Stryker mutator integration
+- Stryker mutator integration with our babylon monorepo to identify true code coverage
 
 </details>
 
@@ -156,6 +199,20 @@ Organization-wide restructure.
 ## 2019
 
 - Location: Family Search Building, Thanksgiving Point, Lehi, treeweb-gold
+- CODEOWNERS adopted through the organization to facilitate better automatic code review request management and explicit code ownership.
+
+<details>
+<summary>Technologies</summary>
+
+- Heroku
+- Akamai
+- JavaScript: Polymer
+- CloudBees (formerly ElectricFlow)
+- SauceLabs
+- Slack + Microsoft Teams
+- VersionOne
+
+</details>
 
 <details>
 <summary>Christmas: Common build config</summary>
