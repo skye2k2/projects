@@ -1,6 +1,6 @@
 # Historical timeline of Clif's projects
 
-in reverse-chronological order (Christmas at the top). A high-level overview of past projects, where entries can be expanded for additional detail.
+in reverse-chronological order. A high-level overview of past projects, where entries can be expanded for additional detail.
 
 <!--- 
 
@@ -12,18 +12,112 @@ Build time: https://www.familysearch.org/frontier/dashboard/zion-builds
 --->
 
 
+## 2025
+
+- Location: Hybrid (1 in-office, 4 remote), treeweb-webdev
+- RootsTech in-person & online (??M web participants (?? countries), ??k in-person (?? countries).
+- Actually release shared family groups and commmunity trees with a positive impact?
+
+<details>
+<summary>Technologies</summary>
+
+- Zion: GitHub monorepo of 274 (+106 zion-ui) components with 40-minute build time (v13)
+    - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, Cypress, NX (not really), ESLint8, Prettier, node 20
+- Heroku, moving this year to pure AWS machines?
+- Akamai
+- JavaScript: React
+- Split.io feature release management (662 active flags)
+- GitHub Action-based application builds
+- SauceLabs
+- Slack + Microsoft Teams
+
+</details>
+
+<details>
+<summary>Footprint</summary>
+
+**Apps owned by tree:**
+
+<!--CONSIDER: Adding requests per hour and unique users per hour metrics from our right-sizing pages, and make sure that those metrics exclude monitoring like they should -->
+
+* ancestors-r9
+* group-management
+* temple-r9
+* tree (deprecated)
+* tree-import-r9
+* tree-lite (iced)
+* tree-person-r9
+* tree-r9
+
+**Shared components owned by tree (35):**
+
+form (77 apps, 34 packages), person (32 apps, 33 packages), person-service (19 apps, 23 packages), pid (10 apps, 13 packages), add-find-flow (4 apps, 9 packages), attribution, click-to-copy, conclusion, error-page, gender-band, group-management, memory-tile, name-template, ordinances-reserve, ordinances-status, person-band, person-quality-score, relationship-viewer, research-help, search-partners, soft-launch, storage-sync, story-cache, story-recent-pids, suggested-reasons, tree-converter, tree-discussion, tree-groups, tree-pedigree, tree-person-info-cards, tree-pubsub, tree-recents, tree-route, tree-subnav-legacy, tree-types
+
+</details>
+
 ## 2024
 
-*Organization-wide restructure: Creation of engineering lead position; shuffling of directs; reallocation of engineers; formalized process for originating story work; tons of extra reporting and paperwork; unrelenting pressure to deliver on stale deadlines, resulting in the temporary loaning of personnel from other teams for a month or two at a time, with very little positive impact.*
+*Organization-wide restructure: Creation of engineering lead position; shuffling of directs; reallocation of engineers; combining of the two tree teams into one; new product owner; formalized process for originating story work; "new" 30-page proces for software development lifecycle; a mandated return to business casual and in-the-office one day a week for engineering; tons of extra reporting and paperwork; unrelenting pressure to deliver on stale deadlines, resulting in the temporary loaning of personnel from other teams for a month or two at a time, with very little positive impact.*
 
-- Location: Remote, treeweb-webdev
-	- We lost another three headcount on the tree team, leaving me the webdev on the team with the most experience with our codebase.
-	- Fortunately, we were also able to decommission or send off applications to other more appropriate teams (temple-r9, tree-import-r9, tree-lite, tree-place-standardizer).
-- RootsTech in-person & online (?M web participants, ?k in-person, ?k hrs of viewed content).
+- Location: Hybrid (1 in-office, 4 remote), treeweb-webdev
+	- We lost another two headcount on the tree team (one dev, one qa), leaving me the webdev on the team with the most experience with our codebase.
+	- Tons of temp help assigned to our team for ~two-month stints, with very little impact on our true velocity (never more productive than typical interns), because our problem space is large and complicated (upper management also attempt near-shoring for three of our headcount).
+	- Fortunately, we were also able to decommission or send off applications to other more appropriate teams (tree-import-r9, tree-place-standardizer).
+- RootsTech in-person & online (4.7M web participants (232 countries), 16k in-person (43 countries), 2.1M participated in Relatives at Rootstech, with 5.9M relationships viewed and 420k chats sent to cousins).
+- Spend the entire year writing and re-writing exceptions and extensions to support shared family groups and community trees.
 - Migrate from CloudBees Flow to GitHub actions for application builds.
-- Migrate last two pedigree views from Polymer to React (descendancy & fanchart).
+- Ryan write the sibling pedigree view by himself.
+- Migrate last two remaining pedigree views from Polymer to React (descendancy & fanchart).
 - Me: 
-  - Create taskmaster bash script that utilizes the JIRA API to manage the tedium of adding labels, epic designations, hours, assignees, and rankings when adding active defects and recurring engineering maintenance stories to our sprints (8 maintenance tasks and ~20 defects every sprint). Shared with other teams.
+  - Enhance Tyler's barebones imlpementation of a GitHub --> Slack notifier to include all necessary logic and features and security enhancements to fully replace my previous implementation made obsolete by moving from CloudBees Flow to GitHub Actions for our CICD pipeline (a dozen+ notifications every day).
+  - Customize GitHub Action-based CICD configuration for all of our applications to work correctly and more efficiently.
+  - Create `taskmaster` bash script that utilizes the Jira API to manage the tedium of adding labels, epic designations, hours, assignees, and rankings when adding active defects and recurring engineering maintenance stories to our sprints (18 maintenance tasks across two stories and ~20 defects every sprint). Shared with other teams.
+  - Provide engineering expertise to QA by rewriting, adding intelligence to, streamlining logging from, testing, and documenting the `click()` function in `qa-shared-base`. Also help with linting and other integrations.
+  - Create `release:translations {team-name}` script for zion monorepo, providing the ability to instantly draft package releases for those packages owned by a team with unreleased translation changes.
+  - Enhance recents list to have a temporary stash for helper mode.
+
+<details>
+<summary>Technologies</summary>
+
+- Zion: GitHub monorepo of 274 (+106 zion-ui) components with 40-minute build time (v13)
+    - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, Cypress, NX (not really), ESLint8, Prettier, Travis CI (deprecated), node 20
+- Heroku, moving next year to pure AWS machines
+- Akamai
+- JavaScript: React (Polymer = deprecated)
+- Split.io feature release management (662 active flags)
+- GitHub Action-based application builds (CloudBees & Travis CI deprecated)
+- SauceLabs
+- Slack + Microsoft Teams
+- Convert from VersionOne project management to Jira Cloud, with some significant hangups and drawbacks
+
+</details>
+
+<details>
+<summary>Footprint</summary>
+
+**Apps owned by tree:**
+
+* ancestors-r9
+* group-management
+* temple-r9
+* tree (deprecated)
+* tree-import-r9
+* tree-lite (iced)
+* tree-person-r9
+* tree-r9
+
+**Shared components owned by tree (35):**
+
+form (77 apps, 34 packages), person (32 apps, 33 packages), person-service (19 apps, 23 packages), pid (10 apps, 13 packages), add-find-flow (4 apps, 9 packages), attribution, click-to-copy, conclusion, error-page, gender-band, group-management, memory-tile, name-template, ordinances-reserve, ordinances-status, person-band, person-quality-score, relationship-viewer, research-help, search-partners, soft-launch, storage-sync, story-cache, story-recent-pids, suggested-reasons, tree-converter, tree-discussion, tree-groups, tree-pedigree, tree-person-info-cards, tree-pubsub, tree-recents, tree-route, tree-subnav-legacy, tree-types
+
+</details>
+
+<details>
+<summary>Christmas (technically given time, but options required to be reviewed by committee?)</summary>
+
+- Fix the pieces of the `taskmaster` Jira maintenance script that were broken by the Jira Cloud migration.
+
+</details>
 
 ## 2023
 
@@ -37,39 +131,45 @@ Build time: https://www.familysearch.org/frontier/dashboard/zion-builds
   - Manage pedigree Community feedback forum and persist React Landscape/Portrait Pedigree Views.
   - Create a Storybook entry that allows for viewing and filtering of all active Split flags, and quick links to search fs-webdev for usages for during the persisting process.
 
-**Apps owned by tree:**
-
-* ancestors-r9
-* app-status-dashboard
-* group-management
-* info-radiator
-* temple-admin
-* temple-r9
-* tree
-* tree-import-r9
-* tree-lite
-* tree-person-r9
-* tree-place-standardizer
-* tree-r9
-
-**Shared components owned by tree (38):**
-
-add-find-flow, ancestor-card, attribution, click-to-copy, conclusion, controlled-edit-trees, error-page, form, gender-band, group-management, memory-tile, name-template, ordinances-reserve, ordinances-status, performance-helpers, person, person-band, person-quality-score, person-service, person-summary, pid, relationship-viewer, research-help, search-partners, soft-launch, storage-sync, story-cache, story-recent-pids, suggested-reasons, tree-discussion, tree-groups, tree-pedigree, tree-person-info-card, tree-pubsub, tree-recents, tree-route, tree-subnav-legacy
-
 <details>
 <summary>Technologies</summary>
 
 - All babylon components moved to zion.
 - Zion: GitHub monorepo of 131 (+104 zion-ui) components with 50-minute build time (v13)
     - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, Cypress, NX (not really), ESLint8, Prettier, Travis CI, node 20
-- Heroku, moving next year to pure AWS machines
+- Heroku, moving soon to pure AWS machines
 - Akamai
 - JavaScript: React (Polymer = deprecated)
 - Split.io feature release management (479 active flags)
 - CloudBees (formerly ElectricFlow), moving next year to pure GitHub action builds
 - SauceLabs
 - Slack + Microsoft Teams
+- Travis CI
 - Convert from VersionOne project management to JIRA, with some significant hangups and drawbacks
+
+</details>
+
+<details>
+<summary>Footprint</summary>
+
+**Apps owned by tree:**
+
+* ancestors-r9
+* app-status-dashboard
+* group-management
+* info-radiator
+* temple-admin (deprecated)
+* temple-r9
+* tree (deprecated)
+* tree-import-r9
+* tree-lite (iced)
+* tree-person-r9
+* tree-place-standardizer (deprecated)
+* tree-r9
+
+**Shared components owned by tree (38):**
+
+add-find-flow, ancestor-card, attribution, click-to-copy, conclusion, controlled-edit-trees, error-page, form, gender-band, group-management, memory-tile, name-template, ordinances-reserve, ordinances-status, performance-helpers, person, person-band, person-quality-score, person-service, person-summary, pid, relationship-viewer, research-help, search-partners, soft-launch, storage-sync, story-cache, story-recent-pids, suggested-reasons, tree-discussion, tree-groups, tree-pedigree, tree-person-info-card, tree-pubsub, tree-recents, tree-route, tree-subnav-legacy
 
 </details>
 
@@ -149,6 +249,7 @@ add-find-flow, ancestor-card, attribution, click-to-copy, conclusion, controlled
 ## 2020
 
 - Location: Family Search Building, Thanksgiving Point, Lehi, treeweb-gold
+- Shift to remote after March.
 - The first year of the organization-wide conversion to React. Begin development of complicated, highly shared components (person and add flow).
 
 <details>
@@ -366,6 +467,11 @@ Enhance https://github.com/skye2k2/pr-police/branches in order to provide better
 <details>
 <summary>Christmas: Integration test help</summary>
 
-- On-premise machines used for integration acceptance testing regularly fail--schedule a daily restart to have each machine ready for each day
+- On-premise machines used for integration acceptance testing regularly fail because of test leftovers--schedule a daily restart to have each machine ready for each day, resulting in ~25% increase in build pass rate
 
 </details>
+
+
+## 2009
+
+- Convert to GitHub for version control management.
