@@ -2,7 +2,7 @@
 
 in reverse-chronological order. A high-level overview of past projects, where entries can be expanded for additional detail.
 
-<!--- 
+<!---
 
 LINKS FOR STATS:
 
@@ -15,21 +15,26 @@ Build time: https://www.familysearch.org/frontier/dashboard/zion-builds
 ## 2025
 
 - Location: Hybrid (1 in-office, 4 remote), treeweb-webdev
-- RootsTech in-person & online (??M web participants (?? countries), ??k in-person (?? countries).
-- Actually release shared family groups and commmunity trees with a positive impact?
+- RootsTech in-person & online (9M web participants (235 countries), 17.3k in-person (46 countries).
+- Massive organization-wide effort to achieve full compliance with the European Accessibility Act of 2025 (our team's code was already fully compliant (yay!), and just received some minor modifications to improve the overall experience).
+- Actually release shared family groups and community trees with a positive impact?
+- Actually release data quality improvement efforts?
 
 <details>
 <summary>Technologies</summary>
 
 - Zion: GitHub monorepo of 274 (+106 zion-ui) components with 40-minute build time (v13)
     - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, Cypress, NX (not really), ESLint8, Prettier, node 20
-- Heroku, moving this year to pure AWS machines?
+- Sonar Qube (Code Climate --> qlty, and refused to keep current, dropped)
+- Heroku, moving next year to pure AWS machines
 - Akamai
+- Dynatrace
 - JavaScript: React
 - Split.io feature release management (662 active flags)
 - GitHub Action-based application builds
 - SauceLabs
 - Slack + Microsoft Teams
+- MASSIVE hype-laden push from management to "AI", with zero functional direction, since we were _already_ utilizing AI resources in our day-to-day development, analysis, and communication.
 
 </details>
 
@@ -43,9 +48,8 @@ Build time: https://www.familysearch.org/frontier/dashboard/zion-builds
 * ancestors-r9
 * group-management
 * temple-r9
-* tree (deprecated)
 * tree-import-r9
-* tree-lite (iced)
+* tree-lite (abandoned in August, despite being the only way that more than 800 unique patrons use FamilySearch, reserve 50 ordinances, and add 200 people to the tree each month, at a server cost of about $50)
 * tree-person-r9
 * tree-r9
 
@@ -63,12 +67,12 @@ form (77 apps, 34 packages), person (32 apps, 33 packages), person-service (19 a
 	- We lost another two headcount on the tree team (one dev, one qa), leaving me the webdev on the team with the most experience with our codebase.
 	- Tons of temp help assigned to our team for ~two-month stints, with very little impact on our true velocity (never more productive than typical interns), because our problem space is large and complicated (upper management also attempt near-shoring for three of our headcount).
 	- Fortunately, we were also able to decommission or send off applications to other more appropriate teams (tree-import-r9, tree-place-standardizer).
-- RootsTech in-person & online (4.7M web participants (232 countries), 16k in-person (43 countries), 2.1M participated in Relatives at Rootstech, with 5.9M relationships viewed and 420k chats sent to cousins).
+- RootsTech in-person & online (4.8M web participants (232 countries), 16k in-person (43 countries), 2.1M participated in Relatives at Rootstech, with 5.9M relationships viewed and 420k chats sent to cousins).
 - Spend the entire year writing and re-writing exceptions and extensions to support shared family groups and community trees.
 - Migrate from CloudBees Flow to GitHub actions for application builds.
 - Ryan write the sibling pedigree view by himself.
 - Migrate last two remaining pedigree views from Polymer to React (descendancy & fanchart).
-- Me: 
+- Me:
   - Enhance Tyler's barebones imlpementation of a GitHub --> Slack notifier to include all necessary logic and features and security enhancements to fully replace my previous implementation made obsolete by moving from CloudBees Flow to GitHub Actions for our CICD pipeline (a dozen+ notifications every day).
   - Customize GitHub Action-based CICD configuration for all of our applications to work correctly and more efficiently.
   - Create `taskmaster` bash script that utilizes the Jira API to manage the tedium of adding labels, epic designations, hours, assignees, and rankings when adding active defects and recurring engineering maintenance stories to our sprints (18 maintenance tasks across two stories and ~20 defects every sprint). Shared with other teams.
@@ -81,13 +85,15 @@ form (77 apps, 34 packages), person (32 apps, 33 packages), person-service (19 a
 
 - Zion: GitHub monorepo of 274 (+106 zion-ui) components with 40-minute build time (v13)
     - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, Cypress, NX (not really), ESLint8, Prettier, Travis CI (deprecated), node 20
-- Heroku, moving next year to pure AWS machines
+- Code Climate
+- Heroku, moving soon to pure AWS machines
 - Akamai
+- Dynatrace
 - JavaScript: React (Polymer = deprecated)
 - Split.io feature release management (662 active flags)
-- GitHub Action-based application builds (CloudBees & Travis CI deprecated)
 - SauceLabs
 - Slack + Microsoft Teams
+- GitHub Action-based application builds (CloudBees & Travis CI deprecated, with significant loss of features)
 - Convert from VersionOne project management to Jira Cloud, with some significant hangups and drawbacks
 
 </details>
@@ -113,9 +119,10 @@ form (77 apps, 34 packages), person (32 apps, 33 packages), person-service (19 a
 </details>
 
 <details>
-<summary>Christmas (technically given time, but options required to be reviewed by committee?)</summary>
+<summary>Christmas (technically given time, but only allowed to work on approved items...)</summary>
 
 - Fix the pieces of the `taskmaster` Jira maintenance script that were broken by the Jira Cloud migration.
+- Fix the build history dashboard to handle new notification format, add helpful logging and comments, and update HOWTO instructions for synthesizing new data.
 
 </details>
 
@@ -126,7 +133,7 @@ form (77 apps, 34 packages), person (32 apps, 33 packages), person-service (19 a
 - RootsTech back to in-person, but also online (3.6M web participants, 14.5k in-person, 128k hrs of viewed content).
 - Active React migrations of the remainder of treeweb code halted to begin immediate development of family group and community edit trees, and the supporting sibling pedigree view (Ancestry.com clone).
 - LLS mode added to React pedigree view for Search team.
-- Me: 
+- Me:
   - Share my build notification scripts with multiple teams and assist them in initial configuration: china, oral-genealogies, relatives-at-events, discovery, discovery-kids, shared-image-viewer, rootstech.
   - Manage pedigree Community feedback forum and persist React Landscape/Portrait Pedigree Views.
   - Create a Storybook entry that allows for viewing and filtering of all active Split flags, and quick links to search fs-webdev for usages for during the persisting process.
@@ -137,8 +144,10 @@ form (77 apps, 34 packages), person (32 apps, 33 packages), person-service (19 a
 - All babylon components moved to zion.
 - Zion: GitHub monorepo of 131 (+104 zion-ui) components with 50-minute build time (v13)
     - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, Cypress, NX (not really), ESLint8, Prettier, Travis CI, node 20
+- Code Climate
 - Heroku, moving soon to pure AWS machines
 - Akamai
+- Dynatrace
 - JavaScript: React (Polymer = deprecated)
 - Split.io feature release management (479 active flags)
 - CloudBees (formerly ElectricFlow), moving next year to pure GitHub action builds
@@ -194,6 +203,12 @@ add-find-flow, ancestor-card, attribution, click-to-copy, conclusion, controlled
 
 - Zion: GitHub monorepo of 113 (+60 zion-ui) components with 60-minute build time (v12)
     - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, NX, ESLint7, Prettier, Travis CI, node 16, terrible MFA SSO
+- Code Climate
+- Heroku, moving soon to pure AWS machines
+- Akamai
+- Dynatrace
+- CloudBees (formerly ElectricFlow)
+- SauceLabs
 
 </details>
 
@@ -226,6 +241,12 @@ add-find-flow, ancestor-card, attribution, click-to-copy, conclusion, controlled
 
 - Zion: GitHub monorepo of 100+ components with 50-minute build time (v10)
     - React, Storybook, Yarn, Linaria, Lerna, Babel, Jest, Travis CI, node 14
+- Code Climate
+- Heroku, moving soon to pure AWS machines
+- Akamai
+- Dynatrace
+- CloudBees (formerly ElectricFlow)
+- SauceLabs
 
 </details>
 
@@ -257,8 +278,10 @@ add-find-flow, ancestor-card, attribution, click-to-copy, conclusion, controlled
 
 - Zion: GitHub monorepo of ~50 components with 20-minute build time (v9)
     - React, Storybook, Yarn, Emotion, Lerna, Babel, Jest, ESLint6, Travis CI, node 14
+- Code Climate
 - Heroku
 - Akamai
+- Dynatrace
 - JavaScript: React (Polymer = deprecated)
 - CloudBees (formerly ElectricFlow)
 - SauceLabs
@@ -340,7 +363,7 @@ Enhance https://github.com/skye2k2/pr-police/branches in order to provide better
 <summary>Technologies</summary>
 
 - fs-components
-    - Polymer, native web components, Web Component Tester, Sauce, ESLint, Code Climate, Travis CI, 
+    - Polymer, native web components, Web Component Tester, Sauce, ESLint, Code Climate, Travis CI,
 - Heroku
 - Akamai
 - JavaScript: Polymer (Angular = deprecated)
